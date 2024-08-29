@@ -1,0 +1,92 @@
+<body>
+	<div class="tab-container">
+		<div class="tab-header">
+			<div class="tab" onclick="openTab(event, 'tab1')">LANGUEDOC-NITRO</div>
+			<div class="tab" onclick="openTab(event, 'tab2')">SEPTUFMANIE</div>
+		</div>
+		<div class="tab-content">
+			<div id="tab1" class="content active">Contenu de l'onglet 1</div>
+			<div id="tab2" class="content">Contenu de l'onglet 2</div>
+		</div>
+	</div>
+</body>
+<script>
+	function openTab(event, tabId) {
+		var i, tabcontent, tablinks;
+		
+		tabcontent = document.getElementsByClassName("content");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].classList.remove("active");
+		}
+		
+		tablinks = document.getElementsByClassName("tab");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].classList.remove("active-red");
+			tablinks[i].classList.remove("active-yellow");
+		}
+		
+		document.getElementById(tabId).classList.add("active");
+		
+		if (tabId === 'tab1') {
+			event.currentTarget.classList.add("active-red");
+		} else if (tabId === 'tab2') {
+			event.currentTarget.classList.add("active-yellow");
+		}
+	}
+</script>
+
+<style>
+	body {
+		font-family: Arial, sans-serif;
+	}
+
+	.tab-container {
+		width: 1280px;
+		border: 1px solid #ccc;
+	}
+
+	.tab-header {
+		display: flex;
+		background-color: #f1f1f1;
+	}
+
+	.tab {
+		flex: 1;
+		padding: 10px;
+		text-align: center;
+		cursor: pointer;
+		color: black;
+		border: 1px solid #ccc;
+		border-bottom: none;
+		background-color: black;
+		color: white;
+		font-weight: bold;
+	}
+
+	.tab:hover {
+		background-color: #eaeaea;
+	}
+
+	.tab.active-red {
+		background-color: red;
+		color: white;
+	}
+
+	.tab.active-yellow {
+		background-color: yellow;
+		color: black;
+	}
+
+	.tab-content {
+		border: 1px solid #ccc;
+		background-color: white;
+	}
+
+	.content {
+		display: none;
+	}
+
+	.content.active {
+		display: block;
+	}
+</style>
