@@ -1,20 +1,40 @@
 <html>
 <body style='margin:0'>
 <div>
-<span><img width="100%" height=245
-src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/headerDiagram.png"></span>
-<div style="position: relative; height: 1px; z-index: 2;">
-<a href="https://synologygaronne.wixsite.com/synologygaronne" target="_blank"><span style='cursor: pointer; position: absolute; z-index: 3; left: 50%; top: calc(100% - 140px); transform: translate(-50%, -50%);'><img width=199 height=190
-src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/garonne.png"></span></a>
-</div>
+	<span>
+		<img width="100%" height=245 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/headerDiagram.png">
+	</span>
+	<div style="position: relative; height: 1px; z-index: 2;">
+		<a href="https://synologygaronne.wixsite.com/synologygaronne" target="_blank">
+			<span style='cursor: pointer; position: absolute; z-index: 3; left: 50%; top: -140px; transform: translate(-50%, -50%);'>
+				<img width=199 height=190 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/garonne.png">
+			</span>
+		</a>
+	</div>
 </div>
 <div class="tab-container">
 	<div class="tab-header">
-		<div class="tab" onclick="openTab(event, 'tab1')">LANGUEDOC-NITRO</div>
+		<div class="tab active-red" onclick="openTab(event, 'tab1')">LANGUEDOC-NITRO</div>
 		<div class="tab" onclick="openTab(event, 'tab2')">SEPTUFMANIE</div>
 	</div>
 	<div class="tab-content">
-		<div id="tab1" class="content active">Contenu de l'onglet 1</div>
+		<div id="tab1" class="content active">
+			<div style="text-align: center; position: relative;">
+				<span>
+					<img width=1015 height=577 src="nitro_fichiers/diagram.png">
+				</span>
+				<span style='position:absolute; z-index:2; left:50%; top:19%; transform: translate(-50%, -50%);'>
+					<img width=217 height=182 src="nitro_fichiers/nitro.png">
+				</span>
+				<span style='position:absolute; z-index:2; left:30%; top:475px; transform: translate(-50%, -50%);'>
+					<img width=192 height=172 src="nitro_fichiers/nitro_compagnon.png">
+				</span>
+				<span style='position:absolute; z-index:2; left:70%; top:475px; transform: translate(-50%, -50%);'>
+					<img width=146 height=171 src="nitro_fichiers/nitro_rover.png">
+				</span>
+			</div>
+		</div>
+		</div>
 		<div id="tab2" class="content">Contenu de l'onglet 2</div>
 	</div>
 </div>
