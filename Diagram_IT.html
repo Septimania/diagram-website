@@ -1,0 +1,141 @@
+<html>
+<body style='margin:0; min-width: 960px; overflow-x: scroll;'>
+<div>
+	<span>
+		<img width="100%" height=245 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/headerDiagram.png">
+	</span>
+	<div style="position: relative; height: 1px; z-index: 2;">
+		<a href="https://synologygaronne.wixsite.com/synologygaronne/it" target="_blank">
+			<span style='cursor: pointer; position: absolute; z-index: 3; left: 50%; top: -140px; transform: translate(-50%, -50%);'>
+				<img width=199 height=190 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/garonne-IT.png">
+			</span>
+		</a>
+	</div>
+</div>
+<div class="tab-container">
+	<div class="tab-header">
+		<div class="tab active-red" onclick="openTab(event, 'tab1')">LINGUADOCA-NITRO</div>
+		<div class="tab" onclick="openTab(event, 'tab2')">SETTUFMANIA</div>
+	</div>
+	<div id="tab1"class="content active">
+		<div style="text-align: center; position: relative;">
+			<span>
+				<img width="100%" height=577 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/diagram.png">
+			</span>
+			<a href="https://languedocnitro.wixsite.com/languedoc-nitro/it" target="_blank">
+				<span style='cursor: pointer; position:absolute; z-index:2; left:50%; top:19%; transform: translate(-50%, -50%);'>
+					<img width=217 height=182 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/nitro-IT.png">
+				</span>
+			</a>
+			<a href="https://languedocnitro.wixsite.com/compagnon/it" target="_blank">
+				<span style='cursor: pointer; position:absolute; z-index:2; left:12%; top:475px; transform: translate(-50%, -50%);'>
+					<img width=150 height=172 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/nitro_compagnon-IT.png">
+				</span>
+			</a>
+			<a href="https://languedocnitro.wixsite.com/rover/it" target="_blank">
+				<span style='cursor: pointer; position:absolute; z-index:2; left:88%; top:475px; transform: translate(-50%, -50%);'>
+					<img width=146 height=171 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/nitro_rover.png">
+				</span>
+			</a>
+		</div>
+	</div>
+	<div id="tab2" class="content">
+		<div style="text-align: center; position: relative;">
+			<span>
+				<img width="100%" height=577 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/diagram.png">
+			</span>
+			<a href="https://septufmanie.wixsite.com/septufmanie/it" target="_blank">
+				<span style='cursor: pointer; position:absolute; z-index:2; left:50%; top:19%; transform: translate(-50%, -50%);'>
+					<img width=146 height=182 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/tuf-IT.png">
+				</span>
+			</a>
+			<a href="https://septufmanie.wixsite.com/rover/it" target="_blank">
+				<span style='cursor: pointer; position:absolute; z-index:2; left:88%; top:475px; transform: translate(-50%, -50%);'>
+					<img width=146 height=171 src="https://raw.githubusercontent.com/Septimania/diagram-website/main/files/tuf_rover.png">
+				</span>
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	function openTab(event, tabId) {
+		var i, tabcontent, tablinks;
+		
+		tabcontent = document.getElementsByClassName("content");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].classList.remove("active");
+		}
+		
+		tablinks = document.getElementsByClassName("tab");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].classList.remove("active-red");
+			tablinks[i].classList.remove("active-yellow");
+		}
+		
+		document.getElementById(tabId).classList.add("active");
+		
+		if (tabId === 'tab1') {
+			event.currentTarget.classList.add("active-red");
+		} else if (tabId === 'tab2') {
+			event.currentTarget.classList.add("active-yellow");
+		}
+	}
+</script>
+
+<style>
+	body {
+		font-family: Arial, sans-serif;
+	}
+
+	.tab-container {
+		width: 100%;
+		border: 1px solid #ccc;
+	}
+
+	.tab-header {
+		display: flex;
+		background-color: #f1f1f1;
+	}
+
+	.tab {
+		flex: 1;
+		padding: 10px;
+		text-align: center;
+		cursor: pointer;
+		color: black;
+		border: 1px solid #ccc;
+		border-bottom: none;
+		background-color: black;
+		color: white;
+		font-weight: bold;
+	}
+
+	.tab:hover {
+		background-color: #eaeaea;
+	}
+
+	.tab.active-red {
+		background-color: red;
+		color: white;
+	}
+
+	.tab.active-yellow {
+		background-color: yellow;
+		color: black;
+	}
+
+	.tab-content {
+		border: 1px solid #ccc;
+		background-color: white;
+	}
+
+	.content {
+		display: none;
+	}
+
+	.content.active {
+		display: block;
+	}
+</style>
+</html>
